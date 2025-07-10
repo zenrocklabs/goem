@@ -47,6 +47,18 @@ func TestHoodiConfiguration(t *testing.T) {
 	if HoodiAPI != expectedAPI {
 		t.Errorf("HoodiAPI = %s, want %s", HoodiAPI, expectedAPI)
 	}
+
+	// Test Network Name
+	expectedNetworkName := "hoodi"
+	if HoodiNetworkName != expectedNetworkName {
+		t.Errorf("HoodiNetworkName = %s, want %s", HoodiNetworkName, expectedNetworkName)
+	}
+
+	// Test Environment
+	expectedEnvironment := "testnet"
+	if HoodiEnvironment != expectedEnvironment {
+		t.Errorf("HoodiEnvironment = %s, want %s", HoodiEnvironment, expectedEnvironment)
+	}
 }
 
 func TestHoodiURLsAreValid(t *testing.T) {

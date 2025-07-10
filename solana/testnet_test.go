@@ -38,6 +38,18 @@ func TestTestnetConfiguration(t *testing.T) {
 	if TestnetAPI != expectedAPI {
 		t.Errorf("TestnetAPI = %s, want %s", TestnetAPI, expectedAPI)
 	}
+
+	// Test Network Name
+	expectedNetworkName := "testnet"
+	if TestnetNetworkName != expectedNetworkName {
+		t.Errorf("TestnetNetworkName = %s, want %s", TestnetNetworkName, expectedNetworkName)
+	}
+
+	// Test Environment
+	expectedEnvironment := "testnet"
+	if TestnetEnvironment != expectedEnvironment {
+		t.Errorf("TestnetEnvironment = %s, want %s", TestnetEnvironment, expectedEnvironment)
+	}
 }
 
 func TestTestnetURLsAreValid(t *testing.T) {

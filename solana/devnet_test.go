@@ -38,6 +38,18 @@ func TestDevnetConfiguration(t *testing.T) {
 	if DevnetAPI != expectedAPI {
 		t.Errorf("DevnetAPI = %s, want %s", DevnetAPI, expectedAPI)
 	}
+
+	// Test Network Name
+	expectedNetworkName := "devnet"
+	if DevnetNetworkName != expectedNetworkName {
+		t.Errorf("DevnetNetworkName = %s, want %s", DevnetNetworkName, expectedNetworkName)
+	}
+
+	// Test Environment
+	expectedEnvironment := "devnet"
+	if DevnetEnvironment != expectedEnvironment {
+		t.Errorf("DevnetEnvironment = %s, want %s", DevnetEnvironment, expectedEnvironment)
+	}
 }
 
 func TestDevnetURLsAreValid(t *testing.T) {

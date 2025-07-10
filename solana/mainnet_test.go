@@ -38,6 +38,18 @@ func TestMainnetConfiguration(t *testing.T) {
 	if MainnetAPI != expectedAPI {
 		t.Errorf("MainnetAPI = %s, want %s", MainnetAPI, expectedAPI)
 	}
+
+	// Test Network Name
+	expectedNetworkName := "mainnet"
+	if MainnetNetworkName != expectedNetworkName {
+		t.Errorf("MainnetNetworkName = %s, want %s", MainnetNetworkName, expectedNetworkName)
+	}
+
+	// Test Environment
+	expectedEnvironment := "prod"
+	if MainnetEnvironment != expectedEnvironment {
+		t.Errorf("MainnetEnvironment = %s, want %s", MainnetEnvironment, expectedEnvironment)
+	}
 }
 
 func TestMainnetURLsAreValid(t *testing.T) {

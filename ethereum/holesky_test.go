@@ -47,6 +47,18 @@ func TestHoleskyConfiguration(t *testing.T) {
 	if HoleskyAPI != expectedAPI {
 		t.Errorf("HoleskyAPI = %s, want %s", HoleskyAPI, expectedAPI)
 	}
+
+	// Test Network Name
+	expectedNetworkName := "holesky"
+	if HoleskyNetworkName != expectedNetworkName {
+		t.Errorf("HoleskyNetworkName = %s, want %s", HoleskyNetworkName, expectedNetworkName)
+	}
+
+	// Test Environment
+	expectedEnvironment := "testnet"
+	if HoleskyEnvironment != expectedEnvironment {
+		t.Errorf("HoleskyEnvironment = %s, want %s", HoleskyEnvironment, expectedEnvironment)
+	}
 }
 
 func TestHoleskyURLsAreValid(t *testing.T) {
